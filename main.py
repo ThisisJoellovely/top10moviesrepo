@@ -12,10 +12,10 @@ from wtforms import DecimalField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 
-
+load_dotenv("/Users/lovely/Documents/100_DaysOfProgramming/064_Day/064_Day:secretkey/.env")
 
 # Constants
-THE_MOVIES_DATABASE_API_KEY = os.environ.get("TOP_10_MOVIES_API_KEY")
+THE_MOVIES_DATABASE_API_KEY = os.getenv("TOP_10_MOVIES_API_KEY")
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
 THE_MOVIES_DATABASE_URL = "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1"
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
@@ -70,11 +70,8 @@ class TopMoviesDataBase(requests.Session):
 
     def makeRequestAddCall(self, the_movies_database_parameter, url=THE_MOVIES_DATABASE_URL):
             response = self.get(url=url, params=the_movies_database_parameter)
-            result = response.json()
-            print("TMDB RESPONSE:", result)
-            return result['results']
-    
-   
+            data = response.json()['results']
+            return data
     
     def makeRequestFindCall(self, the_movies_database_parameter, url):
             response = self.get(url=url, params=the_movies_database_parameter)
