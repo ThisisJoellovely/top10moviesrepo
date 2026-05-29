@@ -15,7 +15,6 @@ from wtforms.validators import DataRequired
 
 
 # Constants
-THE_MOVIES_DATABASE_API_KEY = "175dfd7672f3e6dee79b18aafc91b39f"
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
 THE_MOVIES_DATABASE_URL = "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1"
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
