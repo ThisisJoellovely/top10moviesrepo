@@ -1,5 +1,5 @@
 Flask
-Flask-Bootstrap5
+bootstrap-flask
 Flask-SQLAlchemy
 Flask-WTF
 WTForms
