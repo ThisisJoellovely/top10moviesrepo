@@ -71,7 +71,10 @@ class TopMoviesDataBase(requests.Session):
     def makeRequestAddCall(self, the_movies_database_parameter, url=THE_MOVIES_DATABASE_URL):
             response = self.get(url=url, params=the_movies_database_parameter)
             data = response.json()['results']
+            print("TMDB RESPONSE:", data)  # add this line
             return data
+    
+   
     
     def makeRequestFindCall(self, the_movies_database_parameter, url):
             response = self.get(url=url, params=the_movies_database_parameter)
