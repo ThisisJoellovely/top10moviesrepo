@@ -12,7 +12,7 @@ from wtforms import DecimalField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 
-load_dotenv("/Users/lovely/Documents/100_DaysOfProgramming/064_Day/064_Day:secretkey/.env")
+load_dotenv("/.env")
 
 # Constants
 THE_MOVIES_DATABASE_API_KEY = os.getenv("TOP_10_MOVIES_API_KEY")
