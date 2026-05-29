@@ -12,10 +12,10 @@ from wtforms import DecimalField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
 
-load_dotenv("/Users/lovely/Documents/100_DaysOfProgramming/064_Day/064_Day:secretkey/.env")
+
 
 # Constants
-THE_MOVIES_DATABASE_API_KEY = os.getenv("TOP_10_MOVIES_API_KEY")
+THE_MOVIES_DATABASE_API_KEY = "175dfd7672f3e6dee79b18aafc91b39f"
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
 THE_MOVIES_DATABASE_URL = "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1"
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
