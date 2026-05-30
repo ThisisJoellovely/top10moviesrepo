@@ -1,6 +1,5 @@
 import os
-import requests  
-from dotenv import load_dotenv
+import requests
 from flask import Flask, render_template, redirect, url_for, request
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
@@ -11,13 +10,8 @@ from flask_wtf import FlaskForm
 from wtforms import DecimalField, StringField, SubmitField
 from wtforms.validators import DataRequired
 
-
-#load_dotenv(".env")
-
-THE_MOVIES_DATABASE_API_KEY = os.environ.get("TOP_10_MOVIES_API_KEY")
-
 # Constants
-THE_MOVIES_DATABASE_API_KEY = os.getenv("TOP_10_MOVIES_API_KEY")
+THE_MOVIES_DATABASE_API_KEY = os.environ.get("TOP_10_MOVIES_API_KEY")
 MOVIE_DB_INFO_URL = "https://api.themoviedb.org/3/movie"
 THE_MOVIES_DATABASE_URL = "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1"
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
